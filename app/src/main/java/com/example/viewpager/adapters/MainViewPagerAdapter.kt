@@ -13,12 +13,18 @@ class MainViewPagerAdapter(fm : FragmentManager): FragmentPagerAdapter(fm) {
     }
 
     override fun getItem(position: Int): Fragment {
-        return if (position == 0){
-            NameFragment()
-        } else if (position == 1){
-            MyInfoFragment()
-        } else {
-            GreetingsFragment()
+        return when(position) {
+            0 ->  NameFragment()
+            1 -> MyInfoFragment()
+            else -> GreetingsFragment()
+        }
+    }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position) {
+            0 ->  "이름"
+            1 -> "내 정보"
+            else -> "인사말"
         }
     }
 }

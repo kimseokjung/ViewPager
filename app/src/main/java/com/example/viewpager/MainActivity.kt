@@ -22,6 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         //탭레이아웃 -> viewpager 연결
 
-        myTebLayout.setupWithViewPager(mainViewPager)
+        myTabLayout.setupWithViewPager(mainViewPager)
     }
 }
