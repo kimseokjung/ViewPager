@@ -18,5 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         // 페이지가 많아지면 부드럽도록 지원하는 기능
         mainViewPager.offscreenPageLimit = 3
+
+
+        //탭레이아웃 -> viewpager 연결
+
+        myTebLayout.setupWithViewPager(mainViewPager)
     }
 }
